@@ -18,5 +18,5 @@ SELECT c.user_name
  INNER JOIN cwd_group g       ON (m.parent_id = g.id)
  INNER JOIN user_mapping um ON (c.user_name = um.username)
  INNER JOIN logininfo li ON (um.user_key = li.username)
- WHERE g.group_name LIKE 'CEO-%' ;
+ WHERE g.group_name LIKE '$GROUP_NAME%' ;
  ```
