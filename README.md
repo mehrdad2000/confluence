@@ -1,6 +1,6 @@
 # confluence
 
-## Get user login date (postgres)
+## Get user login date with group name (postgres)
 
 ```
 WITH last_login_date AS
