@@ -1,5 +1,5 @@
-
-<p class="auto-cursor-target"><br /></p><ac:structured-macro ac:name="html" ac:schema-version="1" ac:macro-id="ecf7ab96-0d32-418f-b3f2-5fa8113f92aa"><ac:plain-text-body><![CDATA[<script type="text/javascript">
+<ac:structured-macro ac:macro-id="ecf7ab96-0d32-418f-b3f2-5fa8113f92aa" ac:name="html" ac:schema-version="1">
+  <ac:plain-text-body><![CDATA[<script type="text/javascript">
 function ISO8583(message, additionLength)
 {
 this.fields = {
@@ -333,17 +333,15 @@ this.message = message;
 this.init();
 }
 }
-</script>]]></ac:plain-text-body></ac:structured-macro>
-<p><br /></p>
-<p class="auto-cursor-target"><br /></p><ac:structured-macro ac:name="html" ac:schema-version="1" ac:macro-id="826d1f32-9139-4c99-ad88-142d9e37f355"><ac:plain-text-body><![CDATA[<script type="text/javascript">
+</script>]]></ac:plain-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="826d1f32-9139-4c99-ad88-142d9e37f355" ac:name="html" ac:schema-version="1">
+  <ac:plain-text-body><![CDATA[<script type="text/javascript">
 var message;
 
 function addRow(label, value)
 {
-return '
-<tr>
-<td>'+label+'</td>
-<td>'+value+'</td></tr>';
+return '<tr><td>'+label+'</td><td>'+value+'</td></tr>';
 }
 function parseMessage()
 {
@@ -351,17 +349,9 @@ message = document.getElementById('input').value;
 var iso = new ISO8583(message, 1);
 var data = iso.parseDataElement();
 
-var propertiesHTML = '
-<h3>Message Poperties</h3>
-<table border="1">
-<thead>
-<tr>
-<td>Label</td>
-<td>Value</td>
-<tr></thead>';
+var propertiesHTML = '<h3>Message Poperties</h3><table border="1"><thead><tr><td>Label</td><td>Value</td><tr></thead>';
 
-propertiesHTML += '
-<tbody>';
+propertiesHTML += '<tbody>';
 
 propertiesHTML += addRow('MTI', iso.mti);
 
@@ -392,26 +382,18 @@ for(i in firstdata)
 {
 field.push(i);
 }
-var dataHTML = '
-<h3>Data Elements</h3>
-<table border="1">
-<thead>
-<tr>';
+var dataHTML = '<h3>Data Elements</h3><table border="1"><thead><tr>';
 for(i in firstdata)
 {
-dataHTML += '
-<td>'+i+'</td>';
+dataHTML += '<td>'+i+'</td>';
 }
-dataHTML += '</tr></thead>
-<tbody>'
+dataHTML += '</tr></thead><tbody>'
 for(i in data)
 {
-dataHTML += '
-<tr>';
+dataHTML += '<tr>';
 for(j in data[i])
 {
-dataHTML += '
-<td>'+data[i][j]+'</td>';
+dataHTML += '<td>'+data[i][j]+'</td>';
 }
 dataHTML += '</tr>';
 }
@@ -458,16 +440,12 @@ background-color:#EEEEEE;
 }
 </style>
 
-
 <div class="form">
-
 <h1>ISO 8583 Parser</h1>
 <form action="" method="get" enctype="multipart/form-data" class="aui" onsubmit="return false;">
-
 <div>
 <textarea class="textarea long-field" id="input" placeholder="Type ISO 8583 message here...">0200B23A800128A1801800000000140000006500000000000020500428132710000578132710042804280428034561745917000123400001100000230579A1B2C3D4E5 SOLABTEST TEST-3 DF MX010abcdefghij4847B456PRO013 1234P0399904ABCD</textarea>
 </div>
-
 <div>
 <input type="button" class="aui-button" id="calc" value="Parse Message" onclick="parseMessage()">
 </div>
@@ -475,11 +453,14 @@ background-color:#EEEEEE;
 </div>
 
 
-
 <div id="properties"></div>
-
 <div id="data"></div>
 
-]]></ac:plain-text-body></ac:structured-macro>
-<p><br /></p>
-<p><br /></p>
+]]></ac:plain-text-body>
+</ac:structured-macro>
+<p>
+  <br/>
+</p>
+<p>
+  <br/>
+</p>
